@@ -12,4 +12,9 @@ router.post("/book_entry",async(req,res)=>{
     })
 })
 
+router.get("/book_view",async(req,res)=>{
+    let data=await bookModel.find()
+    res.json(data)
+})
+
 module.exports=router
