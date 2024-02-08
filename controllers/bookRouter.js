@@ -17,4 +17,10 @@ router.get("/book_view",async(req,res)=>{
     res.json(data)
 })
 
+router.post("/book_search",async(req,res)=>{
+    let input=req.body
+    let data=await bookModel.find(input)
+    res.json(data)
+})
+
 module.exports=router
